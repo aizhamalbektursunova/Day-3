@@ -9,31 +9,31 @@ function getType(value) {
 }
 
 // Тесты
-console.log(getType(42));          // "number"
-console.log(getType("hello"));     // "string"
-console.log(getType(null));        // "null"
-console.log(getType([]));          // "array"
-console.log(getType({}));          // "object"
-console.log(getType(() => {}));    // "function"
-console.log(getType(new Date()));  // "date"
+console.log(getType(42));          
+console.log(getType("hello"));     
+console.log(getType(null));        
+console.log(getType([]));          
+console.log(getType({}));          
+console.log(getType(() => {}));    
+console.log(getType(new Date()));  
 
 
 // Задача 2: Проверка числового ввода и преобразование строки в число
 
 function parseNumber(input) {
-    if (typeof input === "number") return input; // Если уже число, возвращаем
-    if (typeof input !== "string") return NaN; // Если не строка, то NaN
+    if (typeof input === "number") return input; 
+    if (typeof input !== "string") return NaN; 
 
-    const num = Number(input.trim()); // Убираем пробелы и преобразуем
-    return isNaN(num) ? NaN : num; // Если получилось NaN, возвращаем ошибку
+    const num = Number(input.trim()); 
+    return isNaN(num) ? NaN : num; 
 }
 
 // Тесты
-console.log(parseNumber("  42  "));  // 42
-console.log(parseNumber("3.14"));    // 3.14
-console.log(parseNumber("abc"));     // NaN
-console.log(parseNumber("0xFF"));    // 255 (шестнадцатеричное число)
-console.log(parseNumber(null));      // NaN
+console.log(parseNumber("  42  ")); 
+console.log(parseNumber("3.14"));    
+console.log(parseNumber("abc"));     
+console.log(parseNumber("0xFF"));    
+console.log(parseNumber(null));      
 
 // Задача 3: Спрашиваем возраст, но с валидацией ввода
 
