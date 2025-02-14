@@ -71,10 +71,38 @@ console.log(isEven(7));
 console.log(isEven(0));  
 console.log(isEven(-4)); 
 
+// Задача 2: Реализовать оператор ?? вручную
 
+function nullishCoalescing(a, b) {
+    return (a === null || a === undefined) ? b : a;
+}
 
+// Тесты
+console.log(nullishCoalescing(null, "default")); 
+console.log(nullishCoalescing(undefined, 42));  
+console.log(nullishCoalescing(0, 100));         
+console.log(nullishCoalescing("", "hello"));    
+console.log(nullishCoalescing(false, true));    
 
+// Задача 3: Выполнение математического выражения из строки
 
+// Условие:
+// Напишите функцию calculate(expression), которая принимает строку вида "2 + 3 * 4" и вычисляет её результат.
+
+function calculate(expression) {
+    try {
+        return new Function(return ${expression})();
+    } catch (error) {
+        return "Ошибка в выражении!";
+    }
+}
+
+// Тесты
+console.log(calculate("2 + 3 * 4"));
+console.log(calculate("10 / 2 - 3")); 
+console.log(calculate("5 ** 2 + 1")); 
+console.log(calculate("100 % 3")); 
+console.log(calculate("abc + 5")); 
 
 
 
