@@ -57,3 +57,30 @@ function askAge() {
 }
 
 askAge();
+
+// Day-4
+// Задача 1: Определить чётное или нечётное число без %
+
+function isEven(num) {
+    return (num & 1) === 0; // Используем побитовую операцию AND
+}
+
+// Тесты
+console.log(isEven(10)); 
+console.log(isEven(7));  
+console.log(isEven(0));  
+console.log(isEven(-4)); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
