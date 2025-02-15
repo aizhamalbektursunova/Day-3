@@ -106,9 +106,59 @@ console.log(calculate("abc + 5"));
 
 
 
+// Day-5
+
+// Задача 1: Найти наибольшее из трёх чисел без Math.max
+
+// Условие:
+// Написать функцию maxOfThree(a, b, c), которая возвращает наибольшее из трёх чисел, используя только условные операторы (if или тернарный ? :).
 
 
+function maxOfThree(a, b, c) {
+    return a > b ? (a > c ? a : c) : (b > c ? b : c);
+}
+
+// Тесты
+console.log(maxOfThree(10, 20, 30)); 
+console.log(maxOfThree(-5, -2, -10)); 
+console.log(maxOfThree(7, 7, 7)); 
+console.log(maxOfThree(100, 50, 99));
+
+// Задача 2: Проверка, является ли число степенью двойки
+
+// Условие:
+// Написать функцию isPowerOfTwo(n), которая определяет, является ли число n степенью двойки (например, 1, 2, 4, 8, 16, 32, ...).
 
 
+function isPowerOfTwo(n) {
+    return n > 0 && (n & (n - 1)) === 0;
+}
 
+// Тесты
+console.log(isPowerOfTwo(1)); 
+console.log(isPowerOfTwo(2)); 
+console.log(isPowerOfTwo(8)); 
+console.log(isPowerOfTwo(10)); 
+console.log(isPowerOfTwo(1024));
+
+// Задача 3: Определить, является ли год високосным
+
+// Условие:
+// Написать функцию isLeapYear(year), которая проверяет, является ли год високосным.
+
+// Правила високосного года:
+// 1. Делится на 4.
+// 2. Не делится на 100, кроме случаев, когда делится на 400.
+
+Решение:
+
+function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
+
+// Тесты
+console.log(isLeapYear(2024)); 
+console.log(isLeapYear(1900)); 
+console.log(isLeapYear(2000)); 
+console.log(isLeapYear(2023));
 
