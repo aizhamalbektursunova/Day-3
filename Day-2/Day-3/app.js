@@ -162,3 +162,23 @@ console.log(isLeapYear(1900));
 console.log(isLeapYear(2000)); 
 console.log(isLeapYear(2023));
 
+// Day-6
+// Задача 1: Проверка, является ли число простым
+
+// Условие:
+// Написать функцию isPrime(n), которая проверяет, является ли число n простым (делится только на 1  само себя).
+
+function isPrime(n) {
+    if (n < 2) return false;
+    for (let i = 2; i * i <= n; i++) {
+        if (n % i === 0) return false;
+    }
+    return true;
+}
+
+// Тесты
+console.log(isPrime(2));
+console.log(isPrime(7)); 
+console.log(isPrime(10));
+console.log(isPrime(17)); 
+console.log(isPrime(25));
