@@ -182,3 +182,52 @@ console.log(isPrime(7));
 console.log(isPrime(10));
 console.log(isPrime(17)); 
 console.log(isPrime(25));
+
+
+// Задача 2: Нахождение НОД (наибольшего общего делителя)
+
+// Условие:
+// Написать функцию gcd(a, b), которая находит НОД двух чисел (используем алгоритм Евклида).
+
+
+function gcd(a, b) {
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+// Тесты
+console.log(gcd(48, 18)); 
+console.log(gcd(101, 103)); 
+console.log(gcd(56, 98)); 
+console.log(gcd(270, 192));
+
+
+// Задача 3: Вывод всех чисел Фибоначчи до n
+
+// Условие:
+// Написать функцию fibonacci(n), которая выводит все числа Фибоначчи, не превышающие n.
+
+
+function fibonacci(n) {
+    let a = 0, b = 1;
+    let sequence = [a, b];
+    
+    while (true) {
+        let next = a + b;
+        if (next > n) break;
+        sequence.push(next);
+        a = b;
+        b = next;
+    }
+
+    return sequence;
+}
+
+// Тесты
+console.log(fibonacci(10)); 
+console.log(fibonacci(50)); 
+console.log(fibonacci(100);
