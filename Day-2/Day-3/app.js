@@ -250,3 +250,36 @@ console.log(isPalindrome("A man, a plan, a canal: Panama"));
 console.log(isPalindrome("hello")); 
 console.log(isPalindrome("12321")); 
 console.log(isPalindrome("Was it a car or a cat I saw?"));
+
+
+// Задача 2: Найти сумму всех чисел в массиве (используем reduce)
+
+// Условие:
+// Написать функцию sumArray(arr), которая принимает массив чисел и возвращает их сумму.
+
+
+const sumArray = (arr) => arr.reduce((sum, num) => sum + num, 0);
+
+// Тесты
+console.log(sumArray([1, 2, 3, 4, 5])); 
+console.log(sumArray([10, -2, 8, -4]));
+console.log(sumArray([0, 0, 0]));
+console.log(sumArray([100])); 
+console.log(sumArray([]));
+
+
+// Задача 3: Переставить слова в строке в обратном порядке
+
+// Условие:
+// Написать функцию reverseWords(str), которая принимает строку и меняет порядок слов в ней.
+
+
+
+const reverseWords = (str) => str.split(' ').reverse().join(' ');
+
+// Тесты
+console.log(reverseWords("Hello World")); 
+console.log(reverseWords("The quick brown fox")); 
+console.log(reverseWords("JavaScript is awesome")); 
+console.log(reverseWords("OneWord")); 
+console.log(reverseWords("  Multiple   spaces "));
