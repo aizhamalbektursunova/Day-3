@@ -231,3 +231,22 @@ function fibonacci(n) {
 console.log(fibonacci(10)); 
 console.log(fibonacci(50)); 
 console.log(fibonacci(100);
+
+// Day-7
+
+// Задача 1: Проверка, является ли строка палиндромом
+
+// Условие:
+// Написать функцию isPalindrome(str), которая проверяет, является ли строка палиндромом (читается одинаково слева направо и справа налево).
+
+const isPalindrome = (str) => {
+    let cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return cleanedStr === cleanedStr.split('').reverse().join('');
+};
+
+// Тесты
+console.log(isPalindrome("racecar")); 
+console.log(isPalindrome("A man, a plan, a canal: Panama")); 
+console.log(isPalindrome("hello")); 
+console.log(isPalindrome("12321")); 
+console.log(isPalindrome("Was it a car or a cat I saw?"));
