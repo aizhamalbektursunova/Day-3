@@ -283,3 +283,16 @@ console.log(reverseWords("The quick brown fox"));
 console.log(reverseWords("JavaScript is awesome")); 
 console.log(reverseWords("OneWord")); 
 console.log(reverseWords("  Multiple   spaces "));
+
+// Day-8
+const filterByLength = (arr, minLength) => arr.filter(word => word.length >= minLength);
+
+// Тесты
+console.log(filterByLength(["apple", "hi", "banana", "cat", "elephant"], 4)); 
+// ["apple", "banana", "elephant"]
+
+console.log(filterByLength(["a", "bb", "ccc", "dddd"], 3)); 
+// ["ccc", "dddd"]
+
+console.log(filterByLength(["short", "longer", "longest"], 6)); 
+// ["longest"]
