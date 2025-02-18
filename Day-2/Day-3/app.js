@@ -285,6 +285,10 @@ console.log(reverseWords("OneWord"));
 console.log(reverseWords("  Multiple   spaces "));
 
 // Day-8
+// Задача 1: Фильтрация массива по длине слов
+
+// Условие:
+// Написать функцию filterByLength(arr, minLength), которая принимает массив строк arr и целое число minLength, и возвращает только те строки, длина которых не меньше minLength.
 const filterByLength = (arr, minLength) => arr.filter(word => word.length >= minLength);
 
 // Тесты
@@ -296,3 +300,27 @@ console.log(filterByLength(["a", "bb", "ccc", "dddd"], 3));
 
 console.log(filterByLength(["short", "longer", "longest"], 6)); 
 // ["longest"]
+
+// Задача 2: Сортировка массива чисел по возрастанию
+
+// Условие:
+// Написать функцию sortNumbers(arr), которая сортирует массив чисел в порядке возрастания.
+const sortNumbers = (arr) => arr.slice().sort((a, b) => a - b);
+
+// Тесты
+console.log(sortNumbers([5, 2, 8, 1, 3])); // [1, 2, 3, 5, 8]
+console.log(sortNumbers([10, -5, 0, 99, 3])); // [-5, 0, 3, 10, 99]
+console.log(sortNumbers([100, 50, 20, 30])); // [20, 30, 50, 100]
+
+// Задача 3: Найти первое четное число в массиве
+
+// Условие:
+//Написать функцию findFirstEven(arr), которая возвращает первое четное число из массива или null, если четных чисел нет.
+
+const findFirstEven = (arr) => arr.find(num => num % 2 === 0) ?? null;
+
+// Тесты
+console.log(findFirstEven([1, 3, 7, 8, 9])); // 8
+console.log(findFirstEven([11, 15, 21, 23])); // null
+console.log(findFirstEven([4, 5, 6])); // 4
+console.log(findFirstEven([])); // null
