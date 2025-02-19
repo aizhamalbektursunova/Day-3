@@ -324,3 +324,24 @@ console.log(findFirstEven([1, 3, 7, 8, 9])); // 8
 console.log(findFirstEven([11, 15, 21, 23])); // null
 console.log(findFirstEven([4, 5, 6])); // 4
 console.log(findFirstEven([])); // null
+
+// Задача 1: Фильтрация объектов по значению свойства
+
+// Условие:
+// Написать функцию filterByAge(users, minAge), которая принимает массив объектов users (у каждого объекта есть поле name и age) и возвращает только тех пользователей, чей возраст не меньше minAge.
+
+const filterByAge = (users, minAge) => users.filter(({ age }) => age >= minAge);
+
+// Тесты
+const users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 17 },
+    { name: "Charlie", age: 30 },
+    { name: "David", age: 15 }
+];
+
+console.log(filterByAge(users, 18)); 
+// [{ name: "Alice", age: 25 }, { name: "Charlie", age: 30 }]
+
+console.log(filterByAge(users, 30)); 
+// [{ name: "Charlie", age: 30 }]
