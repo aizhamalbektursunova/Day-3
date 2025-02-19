@@ -345,3 +345,22 @@ console.log(filterByAge(users, 18));
 
 console.log(filterByAge(users, 30)); 
 // [{ name: "Charlie", age: 30 }]
+
+// Задача 2: Поиск объекта с наибольшим значением свойства
+
+// Условие:
+// Написать функцию findOldestPerson(users), которая принимает массив объектов users и возвращает объект самого старшего пользователя.
+
+const findOldestPerson = (users) => users.reduce((oldest, person) => 
+    person.age > oldest.age ? person : oldest, users[0]);
+
+// Тесты
+console.log(findOldestPerson(users)); 
+// { name: "Charlie", age: 30 }
+
+console.log(findOldestPerson([
+    { name: "Eve", age: 45 },
+    { name: "Sam", age: 50 },
+    { name: "Mia", age: 38 }
+])); 
+// { name: "Sam", age: 50 }
